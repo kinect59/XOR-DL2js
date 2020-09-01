@@ -17,27 +17,7 @@ async function run() {
 }
 run();
 
-/*
-async function run() {
-  // Create a simple model.
-  const model = tf.sequential();
-  model.add(tf.layers.dense({units: 10, activation: 'sigmoid',inputShape: [2]}));
-  model.add(tf.layers.dense({units: 1, activation: 'sigmoid',inputShape: [10]}));
-  // Prepare the model for training: Specify the loss and the optimizer.
-  model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
-  //model.compile({loss: 'meanSquaredError', optimizer: 'rmsprop'});
-  // Generate some synthetic data for training. (y = 2x - 1)
-  const xs = tf.tensor2d([[0,0],[0,1],[1,0],[1,1]]);
-  const target_data = tf.tensor2d([[0],[1],[1],[0]]);
-  // Train the model using the data.
-  await model.fit(xs, ys, {epochs: 250});
-  // Use the model to do inference on a data point the model hasn't seen.
-  // Should print approximately 39.
-  document.getElementById('micro-out-div').innerText =
-      model.predict(tf.tensor2d([1, 0])).dataSync();
-}
-run();
-*/
+
 
 /*
 // Tiny TFJS train / predict example.
